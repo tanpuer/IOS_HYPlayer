@@ -13,10 +13,10 @@
 #include "../base/IFilter.hpp"
 
 static GLfloat imageVertex[] = {
-    -1.0, 1.0, 0.0, 1.0,
-    -1.0, -1.0, 0.0, 0.0,
-    1.0, -1.0, 1.0, 0.0,
-    1.0, 1.0, 1.0, 1.0
+    -1.0, 1.0, 0.0, 0.0,
+    -1.0, -1.0, 0.0, 1.0,
+    1.0, -1.0, 1.0, 1.0,
+    1.0, 1.0, 1.0, 0.0
 };
 
 static GLshort imageIndices[] = {
@@ -44,6 +44,7 @@ private:
     GLuint indicesBuffer = -1;
     
     GLuint textureId = -1;
+    GLuint samplerObj = -1;
     void loadImage();
     
 };

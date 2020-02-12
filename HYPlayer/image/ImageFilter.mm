@@ -23,8 +23,8 @@ ImageFilter::~ImageFilter() {
 void ImageFilter::init() {
     const char *vertex_shader_string = {
             "attribute vec4 aPosition;\n"
-            "attribute vec4 aTextureCoord;\n"
-            "varying vec4 vTextureCoord;\n"
+            "attribute vec2 aTextureCoord;\n"
+            "varying vec2 vTextureCoord;\n"
             "void main()\n"
             "{\n"
             "    gl_Position = aPosition;\n"
@@ -33,17 +33,17 @@ void ImageFilter::init() {
     };
     const char *fragment_shader_string = {
             "precision mediump float;\n"
-            "varying vec4 vTextureCoord;\n"
+            "varying vec2 vTextureCoord;\n"
             "uniform sampler2D samplerObj;\n"
             "void main()\n"
             "{\n"
-            "    //gl_FragColor = texture2D(samplerObj, vTextureCoord);\n"
-            "    gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);\n"
+            "    gl_FragColor = texture2D(samplerObj, vTextureCoord);\n"
             "}\n"
     };
     vertexShader = loadShader(GL_VERTEX_SHADER, vertex_shader_string);
     fragmentShader = loadShader(GL_FRAGMENT_SHADER, fragment_shader_string);
     program = createShaderProgram(vertexShader, fragmentShader);
+    samplerObj = glGetUniformLocation(program, "samplerObj");
     NSLog(@"%d %d %d", vertexShader, fragmentShader, program);
     
     glGenBuffers(1, &bonesBuffer);
@@ -72,10 +72,10 @@ void ImageFilter::doFrame() {
     GLint vertexCount = sizeof(imageIndices) / (sizeof(imageIndices[0]));
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, textureId);
-    GLuint samplerObj = glGetUniformLocation(program, "samplerObj");
     glUniform1i(samplerObj, 0);
     glDrawElements(GL_TRIANGLES, vertexCount, GL_UNSIGNED_SHORT, BUFFER_OFFSET(0));
     glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindTexture(GL_TEXTURE_2D, 0);
 }
 
 void ImageFilter::bindAttributes(GLuint program) {
@@ -86,12 +86,13 @@ void ImageFilter::bindAttributes(GLuint program) {
 void ImageFilter::loadImage() {
     int x, y, comp;
     std::string fileloc = "test.jpeg";
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"jpeg" inDirectory:@"image"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"jpeg" inDirectory:@""];
     NSLog(@"test.jpeg path is %@", path);
-    unsigned char *data = stbi_load(fileloc.data(), &x, &y, &comp, STBI_default);
+    unsigned char *data = stbi_load([path cStringUsingEncoding:NSASCIIStringEncoding], &x, &y, &comp, STBI_default);
 
     glGenTextures(1, &textureId);
     GLuint format = GL_RGB;
+    
     if (comp == 1) {
         format = GL_LUMINANCE;
     } else if (comp == 2) {
@@ -112,7 +113,7 @@ void ImageFilter::loadImage() {
         glTexImage2D(GL_TEXTURE_2D, 0, format, x, y, 0, format, GL_UNSIGNED_BYTE, data);
         glBindTexture(GL_TEXTURE_2D, 0);
         stbi_image_free(data);
-        NSLog(@"load image success %s", fileloc.data());
+        NSLog(@"load image success %s %d", fileloc.data(), textureId);
     } else {
         NSLog(@"load image fail %s", fileloc.data());
     }
