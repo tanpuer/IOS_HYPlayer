@@ -13,7 +13,8 @@
 #import <OpenGLES/ES3/gl.h>
 #import <OpenGLES/EAGLDrawable.h>
 #import <UIKit/UIKit.h>
-#import "GLFilter.h"
+#import "TriangleFilter.h"
+#import "ImageFilter.h"
 
 EAGLContext *context = nullptr;
 GLuint frameBuffer;
@@ -50,7 +51,8 @@ void GLRenderer::viewCreated(void *layer) {
     [context presentRenderbuffer:GL_RENDERBUFFER];
     NSLog(@"viewCreated success");
     
-    filter = new GLFilter();
+//    filter = new TriangleFilter();
+    filter = new ImageFilter();
     filter->init();
 }
  
