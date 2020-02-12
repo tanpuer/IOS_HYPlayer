@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		81404E3B23F3DC7500C9ED07 /* GLFilter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 81404E3923F3DC7500C9ED07 /* GLFilter.mm */; };
+		81404E3B23F3DC7500C9ED07 /* TriangleFilter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 81404E3923F3DC7500C9ED07 /* TriangleFilter.mm */; };
 		81404E4223F3FC3B00C9ED07 /* IFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81404E4023F3FC3B00C9ED07 /* IFilter.cpp */; };
 		814B5B8A23F2B86100699CC2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 814B5B8923F2B86100699CC2 /* AppDelegate.m */; };
 		814B5B8D23F2B86100699CC2 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 814B5B8C23F2B86100699CC2 /* SceneDelegate.m */; };
@@ -23,8 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		81404E3923F3DC7500C9ED07 /* GLFilter.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GLFilter.mm; sourceTree = "<group>"; };
-		81404E3A23F3DC7500C9ED07 /* GLFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLFilter.h; sourceTree = "<group>"; };
+		81404E3923F3DC7500C9ED07 /* TriangleFilter.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TriangleFilter.mm; sourceTree = "<group>"; };
+		81404E3A23F3DC7500C9ED07 /* TriangleFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriangleFilter.h; sourceTree = "<group>"; };
 		81404E4023F3FC3B00C9ED07 /* IFilter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IFilter.cpp; sourceTree = "<group>"; };
 		81404E4123F3FC3B00C9ED07 /* IFilter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IFilter.hpp; sourceTree = "<group>"; };
 		814B5B8523F2B86100699CC2 /* HYPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HYPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,8 +108,8 @@
 				8167E94B23F3987400E7254F /* GLLooper.hpp */,
 				81F6326023F3AE1100033AEB /* GLRenderer.h */,
 				81F6326123F3AE1100033AEB /* GLRenderer.mm */,
-				81404E3923F3DC7500C9ED07 /* GLFilter.mm */,
-				81404E3A23F3DC7500C9ED07 /* GLFilter.h */,
+				81404E3923F3DC7500C9ED07 /* TriangleFilter.mm */,
+				81404E3A23F3DC7500C9ED07 /* TriangleFilter.h */,
 			);
 			path = HYPlayer;
 			sourceTree = "<group>";
@@ -184,7 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81404E3B23F3DC7500C9ED07 /* GLFilter.mm in Sources */,
+				81404E3B23F3DC7500C9ED07 /* TriangleFilter.mm in Sources */,
 				8167E94923F3961A00E7254F /* Looper.cpp in Sources */,
 				81F6326223F3AE1100033AEB /* GLRenderer.mm in Sources */,
 				814B5B9023F2B86100699CC2 /* ViewController.m in Sources */,

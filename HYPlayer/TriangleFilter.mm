@@ -6,7 +6,7 @@
 //  Copyright © 2020 templechen. All rights reserved.
 //
 #define GLES_SILENCE_DEPRECATION
-#include "GLFilter.h"
+#include "TriangleFilter.h"
 #include <string>
 #import <Foundation/Foundation.h>
 #include "vector"

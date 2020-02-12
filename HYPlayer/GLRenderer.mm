@@ -13,7 +13,7 @@
 #import <OpenGLES/ES3/gl.h>
 #import <OpenGLES/EAGLDrawable.h>
 #import <UIKit/UIKit.h>
-#import "GLFilter.h"
+#import "TriangleFilter.h"
 
 EAGLContext *context = nullptr;
 GLuint frameBuffer;
