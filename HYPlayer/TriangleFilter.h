@@ -18,7 +18,7 @@ static GLfloat vertex[] = {
         0.5f, -0.5f,
 };
 
-static short indices[] = {
+static GLshort indices[] = {
     0, 1, 2
 };
 
@@ -26,12 +26,12 @@ enum SHADER_ATTRIBUTES {
     ATTRIB_POS
 };
 
-class GLFilter : public IFilter{
+class TriangleFilter : public IFilter{
     
 public:
     
-    GLFilter();
-    ~GLFilter();
+    TriangleFilter();
+    ~TriangleFilter();
     void init() override;
     void doFrame() override;
     void bindAttributes(GLuint program) override;

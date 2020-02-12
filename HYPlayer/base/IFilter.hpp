@@ -12,6 +12,8 @@
 #include <stdio.h>
 #import <OpenGLES/ES3/gl.h>
 
+#define BUFFER_OFFSET(i) ((char*)NULL + (i))
+
 class IFilter {
     
 public:

@@ -19,6 +19,8 @@
 		8167E94623F38D3400E7254F /* GLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8167E94523F38D3400E7254F /* GLView.mm */; };
 		8167E94923F3961A00E7254F /* Looper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8167E94723F3961A00E7254F /* Looper.cpp */; };
 		8167E94C23F3987400E7254F /* GLLooper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8167E94A23F3987400E7254F /* GLLooper.cpp */; };
+		817DE5CD23F448DF0064F16E /* test.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 817DE5CA23F448DF0064F16E /* test.jpeg */; };
+		817DE5CE23F448DF0064F16E /* ImageFilter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 817DE5CC23F448DF0064F16E /* ImageFilter.mm */; };
 		81F6326223F3AE1100033AEB /* GLRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 81F6326123F3AE1100033AEB /* GLRenderer.mm */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,10 @@
 		8167E94823F3961A00E7254F /* Looper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Looper.hpp; sourceTree = "<group>"; };
 		8167E94A23F3987400E7254F /* GLLooper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GLLooper.cpp; sourceTree = "<group>"; };
 		8167E94B23F3987400E7254F /* GLLooper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GLLooper.hpp; sourceTree = "<group>"; };
+		817DE5C923F448DF0064F16E /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		817DE5CA23F448DF0064F16E /* test.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpeg; sourceTree = "<group>"; };
+		817DE5CB23F448DF0064F16E /* ImageFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageFilter.h; sourceTree = "<group>"; };
+		817DE5CC23F448DF0064F16E /* ImageFilter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageFilter.mm; sourceTree = "<group>"; };
 		81F6326023F3AE1100033AEB /* GLRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLRenderer.h; sourceTree = "<group>"; };
 		81F6326123F3AE1100033AEB /* GLRenderer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GLRenderer.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +94,7 @@
 		814B5B8723F2B86100699CC2 /* HYPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				817DE5B723F43AE80064F16E /* image */,
 				81404E3F23F3FBE600C9ED07 /* base */,
 				814B5B8823F2B86100699CC2 /* AppDelegate.h */,
 				814B5B8923F2B86100699CC2 /* AppDelegate.m */,
@@ -112,6 +119,17 @@
 				81404E3A23F3DC7500C9ED07 /* TriangleFilter.h */,
 			);
 			path = HYPlayer;
+			sourceTree = "<group>";
+		};
+		817DE5B723F43AE80064F16E /* image */ = {
+			isa = PBXGroup;
+			children = (
+				817DE5CB23F448DF0064F16E /* ImageFilter.h */,
+				817DE5CC23F448DF0064F16E /* ImageFilter.mm */,
+				817DE5C923F448DF0064F16E /* stb_image.h */,
+				817DE5CA23F448DF0064F16E /* test.jpeg */,
+			);
+			path = image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				817DE5CD23F448DF0064F16E /* test.jpeg in Resources */,
 				814B5B9823F2B86200699CC2 /* LaunchScreen.storyboard in Resources */,
 				814B5B9523F2B86200699CC2 /* Assets.xcassets in Resources */,
 				814B5B9323F2B86100699CC2 /* Main.storyboard in Resources */,
@@ -194,6 +213,7 @@
 				814B5B8D23F2B86100699CC2 /* SceneDelegate.m in Sources */,
 				8167E94623F38D3400E7254F /* GLView.mm in Sources */,
 				8167E94C23F3987400E7254F /* GLLooper.cpp in Sources */,
+				817DE5CE23F448DF0064F16E /* ImageFilter.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

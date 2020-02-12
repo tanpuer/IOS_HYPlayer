@@ -11,13 +11,11 @@
 #import <Foundation/Foundation.h>
 #include "vector"
 
-#define BUFFER_OFFSET(i) ((char*)NULL + (i))
-
-GLFilter::GLFilter() {
+TriangleFilter::TriangleFilter() {
     
 }
 
-GLFilter::~GLFilter() {
+TriangleFilter::~TriangleFilter() {
     glDeleteProgram(program);
     glDeleteShader(vertexShader);
     glDeleteShader(fragmentShader);
@@ -25,7 +23,7 @@ GLFilter::~GLFilter() {
     glDeleteBuffers(1, &indicesBuffer);
 }
 
-void GLFilter::init() {
+void TriangleFilter::init() {
     const char *vertex_shader_string = {
             "attribute vec4 aPosition;\n"
             "void main()\n"
@@ -56,7 +54,7 @@ void GLFilter::init() {
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 }
 
-void GLFilter::doFrame() {
+void TriangleFilter::doFrame() {
     NSLog(@"doFrame");
     glUseProgram(program);
     glBindBuffer(GL_ARRAY_BUFFER, bonesBuffer);
@@ -69,6 +67,6 @@ void GLFilter::doFrame() {
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 }
 
-void GLFilter::bindAttributes(GLuint program) {
+void TriangleFilter::bindAttributes(GLuint program) {
     glBindAttribLocation(program, ATTRIB_POS, "aPosition");
 }
