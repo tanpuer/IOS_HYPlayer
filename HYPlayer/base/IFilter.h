@@ -11,8 +11,10 @@
 
 #include <stdio.h>
 #import <OpenGLES/ES3/gl.h>
+#include "vecmath.h"
 
 #define BUFFER_OFFSET(i) ((char*)NULL + (i))
+#define PI 3.1415926f
 
 class IFilter {
     
@@ -27,6 +29,8 @@ public:
     virtual void genBuffers(const GLvoid* vertexArray, int vertexSize, const GLvoid* indicesArray, int indicesSize);
     
     GLuint loadImage(const char* path);
+
+    virtual void setNativeWindowSize(int width, int height);
     
 protected:
     
@@ -40,6 +44,15 @@ protected:
     //utils
     GLuint loadShader(GLenum type, const char *shaderSrc);
     GLuint createShaderProgram(GLuint vertexShader, GLuint fragmentShader);
+    
+    //mvpMatrix
+    ndk_helper::Mat4 projectionMatrix;
+    ndk_helper::Mat4 viewMatrix;
+    ndk_helper::Mat4 modelMatrix;
+    int scrollX = 0;
+    int scrollY = 0;
+    float scaleIndex = 1.0f;
+    GLuint mvpMatrixLocation = -1;
 };
 
 #endif /* IFilter_hpp */

@@ -58,6 +58,24 @@ GLuint IFilter::loadImage(const char *path) {
     return textureId;
 }
 
+void IFilter::setNativeWindowSize(int width, int height) {
+    int32_t viewport[4];
+    glGetIntegerv(GL_VIEWPORT, viewport);
+    const float CAM_NEAR = 1.0f;
+    const float CAM_FAR = 100.f;
+    if (viewport[2] < viewport[3]) {
+        float aspect =
+                static_cast<float>(viewport[2]) / static_cast<float>(viewport[3]);
+        projectionMatrix =
+                ndk_helper::Mat4::Perspective(aspect, 1.0f, CAM_NEAR, CAM_FAR);
+    } else {
+        float aspect =
+                static_cast<float>(viewport[3]) / static_cast<float>(viewport[2]);
+        projectionMatrix =
+                ndk_helper::Mat4::Perspective(1.0f, aspect, CAM_NEAR, CAM_FAR);
+    }
+}
+
 GLuint IFilter::loadShader(GLenum type, const char *shaderSrc) {
     GLuint shader;
     GLint compiled;

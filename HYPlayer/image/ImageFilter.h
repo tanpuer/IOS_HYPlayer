@@ -39,9 +39,6 @@ public:
     void bindAttributes(GLuint program) override;
     
 private:
-
-//    GLuint bonesBuffer = -1;
-//    GLuint indicesBuffer = -1;
     
     GLuint textureId = -1;
     GLuint samplerObj = -1;

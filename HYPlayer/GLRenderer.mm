@@ -15,6 +15,7 @@
 #import <UIKit/UIKit.h>
 #import "TriangleFilter.h"
 #import "ImageFilter.h"
+#import "CubeFilter.h"
 
 EAGLContext *context = nullptr;
 GLuint frameBuffer;
@@ -52,7 +53,8 @@ void GLRenderer::viewCreated(void *layer) {
     NSLog(@"viewCreated success");
     
 //    filter = new TriangleFilter();
-    filter = new ImageFilter();
+//    filter = new ImageFilter();
+    filter = new CubeFilter();
     filter->init();
     
     glEnable(GL_CULL_FACE);
@@ -64,13 +66,18 @@ void GLRenderer::viewCreated(void *layer) {
  
 void GLRenderer::viewChanged(int width, int height) {
     glViewport(0, 0, width, height);
+    if (filter != nullptr) {
+        filter->setNativeWindowSize(width, height);
+    }
 }
 
 void GLRenderer::viewDoFrame() {
-    glClearColor(0.5f, 0.5f, 0.5f, 1.f);
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    filter->doFrame();
-    [context presentRenderbuffer:GL_RENDERBUFFER];
+    if (filter != nullptr) {
+        glClearColor(0.5f, 0.5f, 0.5f, 1.f);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        filter->doFrame();
+        [context presentRenderbuffer:GL_RENDERBUFFER];
+    }
 }
 
 void GLRenderer::viewDestroyed() {
