@@ -28,7 +28,7 @@ void CubeFilter::init() {
             "uniform sampler2D samplerObj;\n"
             "void main()\n"
             "{\n"
-            "    gl_FragColor = texture2D(samplerObj, vTextureCoord);\n"
+            "    gl_FragColor = vec4(1.0, 1.0, 0.0, 1.0);\n"
             "}\n"
     };
     vertexShader = loadShader(GL_VERTEX_SHADER, vertex_shader_string);
@@ -43,14 +43,14 @@ void CubeFilter::init() {
 }
 
 void CubeFilter::doFrame() {
-    viewMatrix = ndk_helper::Mat4::LookAt(ndk_helper::Vec3(0.0f, 0.0f, 10.0f / scaleIndex),
+    viewMatrix = ndk_helper::Mat4::LookAt(ndk_helper::Vec3(0.0f, 0.0f, 20.0f / scaleIndex),
                                           ndk_helper::Vec3(0.f, 0.f, 0.f),
                                           ndk_helper::Vec3(0.f, 1.f, 0.f));
     modelMatrix = ndk_helper::Mat4::Identity();
     ndk_helper::Mat4 scrollXMat = ndk_helper::Mat4::RotationY(-PI * scrollX / 180);
     ndk_helper::Mat4 scrollYMat = ndk_helper::Mat4::RotationX(-PI * scrollY / 180);
-    scrollX+=1.0f;
-    scrollY+=1.0f;
+    scrollX+=2.0f;
+    scrollY+=2.0f;
     modelMatrix = scrollXMat * scrollYMat * modelMatrix;
     viewMatrix = viewMatrix * modelMatrix;
     ndk_helper::Mat4 mat_vp = projectionMatrix * viewMatrix;

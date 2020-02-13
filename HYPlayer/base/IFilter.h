@@ -15,6 +15,8 @@
 
 #define BUFFER_OFFSET(i) ((char*)NULL + (i))
 #define PI 3.1415926f
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
 
 class IFilter {
     
