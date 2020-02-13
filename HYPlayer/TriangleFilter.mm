@@ -41,21 +41,11 @@ void TriangleFilter::init() {
     vertexShader = loadShader(GL_VERTEX_SHADER, vertex_shader_string);
     fragmentShader = loadShader(GL_FRAGMENT_SHADER, fragment_shader_string);
     program = createShaderProgram(vertexShader, fragmentShader);
-    NSLog(@"%d %d %d", vertexShader, fragmentShader, program);
-    
-    glGenBuffers(1, &bonesBuffer);
-    glBindBuffer(GL_ARRAY_BUFFER, bonesBuffer);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertex), vertex, GL_STATIC_DRAW);
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
-    
-    glGenBuffers(1, &indicesBuffer);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indicesBuffer);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+    NSLog(@"%d %d %d", vertexShader, fragmentShader, program);    
+    genBuffers(vertex, sizeof(vertex), indices, sizeof(indices));
 }
 
 void TriangleFilter::doFrame() {
-    NSLog(@"doFrame");
     glUseProgram(program);
     glBindBuffer(GL_ARRAY_BUFFER, bonesBuffer);
     int32_t stride = sizeof(GLfloat) * 2;

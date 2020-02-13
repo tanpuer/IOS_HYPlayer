@@ -45,22 +45,12 @@ void ImageFilter::init() {
     program = createShaderProgram(vertexShader, fragmentShader);
     samplerObj = glGetUniformLocation(program, "samplerObj");
     NSLog(@"%d %d %d", vertexShader, fragmentShader, program);
-    
-    glGenBuffers(1, &bonesBuffer);
-    glBindBuffer(GL_ARRAY_BUFFER, bonesBuffer);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(imageVertex), imageVertex, GL_STATIC_DRAW);
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
-    
-    glGenBuffers(1, &indicesBuffer);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indicesBuffer);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(imageIndices), imageIndices, GL_STATIC_DRAW);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
-    
+    genBuffers(imageVertex, sizeof(imageVertex), imageIndices, sizeof(imageIndices));
     loadImage();
 }
 
 void ImageFilter::doFrame() {
-    NSLog(@"doFrame");
+//    NSLog(@"doFrame");
     glUseProgram(program);
     glBindBuffer(GL_ARRAY_BUFFER, bonesBuffer);
     int32_t stride = sizeof(GLfloat) * 4;

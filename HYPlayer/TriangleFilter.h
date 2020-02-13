@@ -35,11 +35,6 @@ public:
     void init() override;
     void doFrame() override;
     void bindAttributes(GLuint program) override;
-    
-private:
-
-    GLuint bonesBuffer = -1;
-    GLuint indicesBuffer = -1;
 
 };
 

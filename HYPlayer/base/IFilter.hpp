@@ -24,11 +24,16 @@ public:
     
     virtual void bindAttributes(GLuint program) = 0;
     
+    virtual void genBuffers(const GLvoid* vertexArray, int vertexSize, const GLvoid* indicesArray, int indicesSize);
+    
 protected:
     
     GLuint program;
     GLuint vertexShader;
     GLuint fragmentShader;
+    
+    GLuint bonesBuffer = -1;
+    GLuint indicesBuffer = -1;
 
     //utils
     GLuint loadShader(GLenum type, const char *shaderSrc);

@@ -10,6 +10,18 @@
 #include "vector"
 #include <string>
 
+void IFilter::genBuffers(const GLvoid *vertexArray, int vertexSize, const GLvoid *indicesArray, int indicesSize) {
+    glGenBuffers(1, &bonesBuffer);
+    glBindBuffer(GL_ARRAY_BUFFER, bonesBuffer);
+    glBufferData(GL_ARRAY_BUFFER, vertexSize * sizeof(GLfloat), vertexArray, GL_STATIC_DRAW);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+    glGenBuffers(1, &indicesBuffer);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indicesBuffer);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indicesSize * sizeof(GLshort), indicesArray, GL_STATIC_DRAW);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+}
+
 GLuint IFilter::loadShader(GLenum type, const char *shaderSrc) {
     GLuint shader;
     GLint compiled;
