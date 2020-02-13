@@ -54,17 +54,23 @@ void GLRenderer::viewCreated(void *layer) {
 //    filter = new TriangleFilter();
     filter = new ImageFilter();
     filter->init();
+    
+    glEnable(GL_CULL_FACE);
+    glEnable(GL_DEPTH_TEST);
+    glDepthFunc(GL_LEQUAL);
+    glCullFace(GL_CCW);
+    glEnable(GL_BLEND);
 }
  
 void GLRenderer::viewChanged(int width, int height) {
     glViewport(0, 0, width, height);
-    
-    filter->doFrame();
-    [context presentRenderbuffer:GL_RENDERBUFFER];
 }
 
 void GLRenderer::viewDoFrame() {
-    
+    glClearColor(0.5f, 0.5f, 0.5f, 1.f);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    filter->doFrame();
+    [context presentRenderbuffer:GL_RENDERBUFFER];
 }
 
 void GLRenderer::viewDestroyed() {

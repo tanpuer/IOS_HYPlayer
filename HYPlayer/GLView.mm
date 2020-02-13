@@ -13,6 +13,7 @@
 @property(nonatomic) GLLooper *looper;
 @property(nonatomic) int width;
 @property(nonatomic) int height;
+@property (nonatomic, strong) CADisplayLink *displayLink;
 @end
 
 @implementation GLView
@@ -49,8 +50,18 @@
         _looper = new GLLooper();
         _looper->sendMessage(_looper->kMsgGLViewCreated, (__bridge void *)eaglLayer);
         _looper->sendMessage(_looper->kMsgGLViewChanged, _width, _height);
+        
+        _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(refreshEvent)];
+        [_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+        _displayLink.preferredFramesPerSecond = 30;
     }
     return self;
+}
+
+- (void)refreshEvent {
+    if (_looper != nullptr) {
+        _looper->sendMessage(_looper->kMsgGLViewDoFrame);
+    }
 }
 
 -(void)dealloc {
