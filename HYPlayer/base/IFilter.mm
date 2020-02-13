@@ -6,9 +6,12 @@
 //  Copyright © 2020 templechen. All rights reserved.
 //
 #define GLES_SILENCE_DEPRECATION
-#include "IFilter.hpp"
+#include "IFilter.h"
 #include "vector"
 #include <string>
+#import <Foundation/Foundation.h>
+#define STB_IMAGE_IMPLEMENTATION
+#include "stb_image.h"
 
 void IFilter::genBuffers(const GLvoid *vertexArray, int vertexSize, const GLvoid *indicesArray, int indicesSize) {
     glGenBuffers(1, &bonesBuffer);
@@ -20,6 +23,39 @@ void IFilter::genBuffers(const GLvoid *vertexArray, int vertexSize, const GLvoid
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indicesBuffer);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, indicesSize * sizeof(GLshort), indicesArray, GL_STATIC_DRAW);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+}
+
+GLuint IFilter::loadImage(const char *path) {
+    int x, y, comp;
+    GLuint textureId = -1;
+    unsigned char *data = stbi_load(path, &x, &y, &comp, STBI_default);
+    glGenTextures(1, &textureId);
+    GLuint format = GL_RGB;
+    if (comp == 1) {
+        format = GL_LUMINANCE;
+    } else if (comp == 2) {
+        format = GL_LUMINANCE_ALPHA;
+    } else if (comp == 3) {
+        format = GL_RGB;
+    } else if (comp == 4) {
+        format = GL_RGBA;
+    } else {
+        //todo
+        NSLog(@"unSupport type %d", comp);
+    }
+    if (nullptr != data) {
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, textureId);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        glTexImage2D(GL_TEXTURE_2D, 0, format, x, y, 0, format, GL_UNSIGNED_BYTE, data);
+        glBindTexture(GL_TEXTURE_2D, 0);
+        stbi_image_free(data);
+        NSLog(@"load image success %s %d", path, textureId);
+    } else {
+        NSLog(@"load image fail %s", path);
+    }
+    return textureId;
 }
 
 GLuint IFilter::loadShader(GLenum type, const char *shaderSrc) {

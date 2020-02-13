@@ -10,7 +10,7 @@
 #define GLFilter_hpp
 
 #include <stdio.h>
-#include "base/IFilter.hpp"
+#include "base/IFilter.h"
 
 static GLfloat vertex[] = {
         0.0f, 0.5f,

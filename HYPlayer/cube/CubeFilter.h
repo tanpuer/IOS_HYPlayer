@@ -10,7 +10,7 @@
 #define CubeFilter_hpp
 
 #include <stdio.h>
-#include "IFilter.hpp"
+#include "IFilter.h"
 
 class CubeFilter : public IFilter {
     

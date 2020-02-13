@@ -26,6 +26,8 @@ public:
     
     virtual void genBuffers(const GLvoid* vertexArray, int vertexSize, const GLvoid* indicesArray, int indicesSize);
     
+    GLuint loadImage(const char* path);
+    
 protected:
     
     GLuint program;

@@ -10,7 +10,7 @@
 #define ImageFilter_hpp
 
 #include <stdio.h>
-#include "../base/IFilter.hpp"
+#include "../base/IFilter.h"
 
 static GLfloat imageVertex[] = {
     -1.0, 1.0, 0.0, 0.0,
@@ -45,7 +45,6 @@ private:
     
     GLuint textureId = -1;
     GLuint samplerObj = -1;
-    void loadImage();
     
 };
 
