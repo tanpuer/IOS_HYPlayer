@@ -42,7 +42,7 @@ void ImageFilter::init() {
     fragmentShader = loadShader(GL_FRAGMENT_SHADER, fragment_shader_string);
     program = createShaderProgram(vertexShader, fragmentShader);
     samplerObj = glGetUniformLocation(program, "samplerObj");
-    NSLog(@"%d %d %d", vertexShader, fragmentShader, program);
+    NSLog(@"%d %d %d %d", vertexShader, fragmentShader, program, samplerObj);
     genBuffers(imageVertex, sizeof(imageVertex), imageIndices, sizeof(imageIndices));
     NSString *path = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"jpeg" inDirectory:@""];
     textureId = loadImage([path cStringUsingEncoding:NSASCIIStringEncoding]);

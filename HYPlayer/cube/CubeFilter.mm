@@ -9,8 +9,12 @@
 #include "CubeFilter.h"
 #import <Foundation/Foundation.h>
 #include "vecmath.h"
+extern "C" {
+#include "avformat.h"
+}
 
 void CubeFilter::init() {
+    NSLog(@"ffmpeg version is %s", avcodec_configuration());
     const char *vertex_shader_string = {
             "attribute vec4 aPosition;\n"
             "attribute vec2 aTextureCoord;\n"
