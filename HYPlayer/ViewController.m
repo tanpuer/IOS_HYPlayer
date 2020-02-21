@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "GLView.h"
+#import "VideoView.h"
 
 @interface ViewController ()
 
@@ -17,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    GLView *glView = [[GLView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+    VideoView *glView = [[VideoView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
     [self.view addSubview:glView];
 }
 

@@ -41,6 +41,23 @@
 		8197BDFC23F6E36C00AD507A /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8197BDFB23F6E36C00AD507A /* libiconv.tbd */; };
 		8197BDFE23F6E37900AD507A /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8197BDFD23F6E37900AD507A /* libbz2.tbd */; };
 		8197BE0023F6E38200AD507A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8197BDFF23F6E38200AD507A /* libz.tbd */; };
+		81E9261123FF789900D59088 /* VideoView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 81E9261023FF789900D59088 /* VideoView.mm */; };
+		81E9261923FF7D6400D59088 /* AVPacketData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81E9261723FF7D6400D59088 /* AVPacketData.cpp */; };
+		81E9261C23FF80B300D59088 /* circle_av_packet_queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81E9261A23FF80B300D59088 /* circle_av_packet_queue.cpp */; };
+		81E9261F23FF81A000D59088 /* IDemux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81E9261D23FF81A000D59088 /* IDemux.cpp */; };
+		81E9262223FF81CE00D59088 /* FFVideoDemux.mm in Sources */ = {isa = PBXBuildFile; fileRef = 81E9262023FF81CE00D59088 /* FFVideoDemux.mm */; };
+		81E9262523FF833F00D59088 /* IDecode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81E9262323FF833F00D59088 /* IDecode.cpp */; };
+		81E9262823FF836C00D59088 /* AVFrameData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81E9262623FF836C00D59088 /* AVFrameData.cpp */; };
+		81E9262B23FF83AD00D59088 /* circle_av_frame_queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81E9262923FF83AD00D59088 /* circle_av_frame_queue.cpp */; };
+		81E9262E23FF844D00D59088 /* FFVideoDecode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 81E9262C23FF844D00D59088 /* FFVideoDecode.mm */; };
+		81E9263223FF881600D59088 /* GLVideoLooper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 81E9263023FF881600D59088 /* GLVideoLooper.mm */; };
+		81E9263523FF893D00D59088 /* GLVideoPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 81E9263323FF893D00D59088 /* GLVideoPlayer.mm */; };
+		81E9263A23FF89C300D59088 /* base_filter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 81E9263823FF89C300D59088 /* base_filter.mm */; };
+		81E9263E23FF8A8700D59088 /* gl_utils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 81E9263C23FF8A8700D59088 /* gl_utils.mm */; };
+		81E9264123FF8E9300D59088 /* VideoPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81E9263F23FF8E9300D59088 /* VideoPlayer.cpp */; };
+		81E9264423FF8F3C00D59088 /* DemuxLooper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81E9264223FF8F3C00D59088 /* DemuxLooper.cpp */; };
+		81E9264723FF8FD500D59088 /* DecodeLooper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81E9264523FF8FD500D59088 /* DecodeLooper.cpp */; };
+		81E9264B23FFA37000D59088 /* trailer111.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 81E9264A23FFA37000D59088 /* trailer111.mp4 */; };
 		81F6326223F3AE1100033AEB /* GLRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 81F6326123F3AE1100033AEB /* GLRenderer.mm */; };
 		81FD0E1D23F6D0C0002C7146 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81FD0E1C23F6D0C0002C7146 /* CoreGraphics.framework */; };
 		81FD0E1F23F6D0CC002C7146 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81FD0E1E23F6D0CC002C7146 /* VideoToolbox.framework */; };
@@ -216,6 +233,40 @@
 		8197BDFB23F6E36C00AD507A /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		8197BDFD23F6E37900AD507A /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		8197BDFF23F6E38200AD507A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		81E9260F23FF789900D59088 /* VideoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoView.h; sourceTree = "<group>"; };
+		81E9261023FF789900D59088 /* VideoView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoView.mm; sourceTree = "<group>"; };
+		81E9261723FF7D6400D59088 /* AVPacketData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AVPacketData.cpp; sourceTree = "<group>"; };
+		81E9261823FF7D6400D59088 /* AVPacketData.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AVPacketData.hpp; sourceTree = "<group>"; };
+		81E9261A23FF80B300D59088 /* circle_av_packet_queue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = circle_av_packet_queue.cpp; sourceTree = "<group>"; };
+		81E9261B23FF80B300D59088 /* circle_av_packet_queue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = circle_av_packet_queue.hpp; sourceTree = "<group>"; };
+		81E9261D23FF81A000D59088 /* IDemux.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IDemux.cpp; sourceTree = "<group>"; };
+		81E9261E23FF81A000D59088 /* IDemux.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IDemux.hpp; sourceTree = "<group>"; };
+		81E9262023FF81CE00D59088 /* FFVideoDemux.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FFVideoDemux.mm; sourceTree = "<group>"; };
+		81E9262123FF81CE00D59088 /* FFVideoDemux.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFVideoDemux.h; sourceTree = "<group>"; };
+		81E9262323FF833F00D59088 /* IDecode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IDecode.cpp; sourceTree = "<group>"; };
+		81E9262423FF833F00D59088 /* IDecode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IDecode.hpp; sourceTree = "<group>"; };
+		81E9262623FF836C00D59088 /* AVFrameData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AVFrameData.cpp; sourceTree = "<group>"; };
+		81E9262723FF836C00D59088 /* AVFrameData.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AVFrameData.hpp; sourceTree = "<group>"; };
+		81E9262923FF83AD00D59088 /* circle_av_frame_queue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = circle_av_frame_queue.cpp; sourceTree = "<group>"; };
+		81E9262A23FF83AD00D59088 /* circle_av_frame_queue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = circle_av_frame_queue.hpp; sourceTree = "<group>"; };
+		81E9262C23FF844D00D59088 /* FFVideoDecode.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FFVideoDecode.mm; sourceTree = "<group>"; };
+		81E9262D23FF844D00D59088 /* FFVideoDecode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFVideoDecode.h; sourceTree = "<group>"; };
+		81E9263023FF881600D59088 /* GLVideoLooper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GLVideoLooper.mm; sourceTree = "<group>"; };
+		81E9263123FF881600D59088 /* GLVideoLooper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLVideoLooper.h; sourceTree = "<group>"; };
+		81E9263323FF893D00D59088 /* GLVideoPlayer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GLVideoPlayer.mm; sourceTree = "<group>"; };
+		81E9263423FF893D00D59088 /* GLVideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLVideoPlayer.h; sourceTree = "<group>"; };
+		81E9263823FF89C300D59088 /* base_filter.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = base_filter.mm; sourceTree = "<group>"; };
+		81E9263923FF89C300D59088 /* base_filter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = base_filter.h; sourceTree = "<group>"; };
+		81E9263B23FF8A0800D59088 /* matrix_util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = matrix_util.h; sourceTree = "<group>"; };
+		81E9263C23FF8A8700D59088 /* gl_utils.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = gl_utils.mm; sourceTree = "<group>"; };
+		81E9263D23FF8A8700D59088 /* gl_utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gl_utils.h; sourceTree = "<group>"; };
+		81E9263F23FF8E9300D59088 /* VideoPlayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VideoPlayer.cpp; sourceTree = "<group>"; };
+		81E9264023FF8E9300D59088 /* VideoPlayer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VideoPlayer.hpp; sourceTree = "<group>"; };
+		81E9264223FF8F3C00D59088 /* DemuxLooper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DemuxLooper.cpp; sourceTree = "<group>"; };
+		81E9264323FF8F3C00D59088 /* DemuxLooper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DemuxLooper.hpp; sourceTree = "<group>"; };
+		81E9264523FF8FD500D59088 /* DecodeLooper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DecodeLooper.cpp; sourceTree = "<group>"; };
+		81E9264623FF8FD500D59088 /* DecodeLooper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DecodeLooper.hpp; sourceTree = "<group>"; };
+		81E9264A23FFA37000D59088 /* trailer111.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = trailer111.mp4; sourceTree = "<group>"; };
 		81F6326023F3AE1100033AEB /* GLRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLRenderer.h; sourceTree = "<group>"; };
 		81F6326123F3AE1100033AEB /* GLRenderer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GLRenderer.mm; sourceTree = "<group>"; };
 		81FD0E1623F6C7ED002C7146 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
@@ -299,6 +350,7 @@
 		814B5B8723F2B86100699CC2 /* HYPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				81E9260C23FF781600D59088 /* video_player */,
 				8197BD5923F6DA9600AD507A /* FFmpeg-iOS */,
 				81284F2823F53EC100728DCB /* utils */,
 				81284F2423F5234600728DCB /* cube */,
@@ -559,6 +611,71 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
+		81E9260C23FF781600D59088 /* video_player */ = {
+			isa = PBXGroup;
+			children = (
+				81E9264A23FFA37000D59088 /* trailer111.mp4 */,
+				81E9262F23FF860700D59088 /* render */,
+				81E9261623FF7AD900D59088 /* decode */,
+				81E9261523FF7ACF00D59088 /* demux */,
+				81E9260F23FF789900D59088 /* VideoView.h */,
+				81E9261023FF789900D59088 /* VideoView.mm */,
+				81E9263F23FF8E9300D59088 /* VideoPlayer.cpp */,
+				81E9264023FF8E9300D59088 /* VideoPlayer.hpp */,
+			);
+			path = video_player;
+			sourceTree = "<group>";
+		};
+		81E9261523FF7ACF00D59088 /* demux */ = {
+			isa = PBXGroup;
+			children = (
+				81E9261723FF7D6400D59088 /* AVPacketData.cpp */,
+				81E9261823FF7D6400D59088 /* AVPacketData.hpp */,
+				81E9261A23FF80B300D59088 /* circle_av_packet_queue.cpp */,
+				81E9261B23FF80B300D59088 /* circle_av_packet_queue.hpp */,
+				81E9261D23FF81A000D59088 /* IDemux.cpp */,
+				81E9261E23FF81A000D59088 /* IDemux.hpp */,
+				81E9262023FF81CE00D59088 /* FFVideoDemux.mm */,
+				81E9262123FF81CE00D59088 /* FFVideoDemux.h */,
+				81E9264223FF8F3C00D59088 /* DemuxLooper.cpp */,
+				81E9264323FF8F3C00D59088 /* DemuxLooper.hpp */,
+			);
+			path = demux;
+			sourceTree = "<group>";
+		};
+		81E9261623FF7AD900D59088 /* decode */ = {
+			isa = PBXGroup;
+			children = (
+				81E9262323FF833F00D59088 /* IDecode.cpp */,
+				81E9262423FF833F00D59088 /* IDecode.hpp */,
+				81E9262623FF836C00D59088 /* AVFrameData.cpp */,
+				81E9262723FF836C00D59088 /* AVFrameData.hpp */,
+				81E9262923FF83AD00D59088 /* circle_av_frame_queue.cpp */,
+				81E9262A23FF83AD00D59088 /* circle_av_frame_queue.hpp */,
+				81E9262C23FF844D00D59088 /* FFVideoDecode.mm */,
+				81E9262D23FF844D00D59088 /* FFVideoDecode.h */,
+				81E9264523FF8FD500D59088 /* DecodeLooper.cpp */,
+				81E9264623FF8FD500D59088 /* DecodeLooper.hpp */,
+			);
+			path = decode;
+			sourceTree = "<group>";
+		};
+		81E9262F23FF860700D59088 /* render */ = {
+			isa = PBXGroup;
+			children = (
+				81E9263023FF881600D59088 /* GLVideoLooper.mm */,
+				81E9263123FF881600D59088 /* GLVideoLooper.h */,
+				81E9263323FF893D00D59088 /* GLVideoPlayer.mm */,
+				81E9263423FF893D00D59088 /* GLVideoPlayer.h */,
+				81E9263823FF89C300D59088 /* base_filter.mm */,
+				81E9263923FF89C300D59088 /* base_filter.h */,
+				81E9263B23FF8A0800D59088 /* matrix_util.h */,
+				81E9263C23FF8A8700D59088 /* gl_utils.mm */,
+				81E9263D23FF8A8700D59088 /* gl_utils.h */,
+			);
+			path = render;
+			sourceTree = "<group>";
+		};
 		81FD0E1523F6C7EC002C7146 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -639,6 +756,7 @@
 				814B5B9823F2B86200699CC2 /* LaunchScreen.storyboard in Resources */,
 				814B5B9523F2B86200699CC2 /* Assets.xcassets in Resources */,
 				814B5B9323F2B86100699CC2 /* Main.storyboard in Resources */,
+				81E9264B23FFA37000D59088 /* trailer111.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,23 +767,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81E9264123FF8E9300D59088 /* VideoPlayer.cpp in Sources */,
+				81E9263A23FF89C300D59088 /* base_filter.mm in Sources */,
+				81E9262E23FF844D00D59088 /* FFVideoDecode.mm in Sources */,
+				81E9262B23FF83AD00D59088 /* circle_av_frame_queue.cpp in Sources */,
 				81404E3B23F3DC7500C9ED07 /* TriangleFilter.mm in Sources */,
 				8167E94923F3961A00E7254F /* Looper.cpp in Sources */,
 				81F6326223F3AE1100033AEB /* GLRenderer.mm in Sources */,
 				814B5B9023F2B86100699CC2 /* ViewController.m in Sources */,
 				81284F2723F5237000728DCB /* CubeFilter.mm in Sources */,
 				814B5B8A23F2B86100699CC2 /* AppDelegate.m in Sources */,
+				81E9263E23FF8A8700D59088 /* gl_utils.mm in Sources */,
+				81E9262523FF833F00D59088 /* IDecode.cpp in Sources */,
+				81E9261F23FF81A000D59088 /* IDemux.cpp in Sources */,
 				8197BDEC23F6DA9600AD507A /* ffmpeg.c in Sources */,
 				8197BDEB23F6DA9600AD507A /* cmdutils.c in Sources */,
+				81E9263223FF881600D59088 /* GLVideoLooper.mm in Sources */,
+				81E9262223FF81CE00D59088 /* FFVideoDemux.mm in Sources */,
 				81404E4223F3FC3B00C9ED07 /* IFilter.mm in Sources */,
 				814B5B9B23F2B86200699CC2 /* main.m in Sources */,
 				8197BDE823F6DA9600AD507A /* ffmpeg_opt.c in Sources */,
+				81E9264423FF8F3C00D59088 /* DemuxLooper.cpp in Sources */,
+				81E9262823FF836C00D59088 /* AVFrameData.cpp in Sources */,
+				81E9263523FF893D00D59088 /* GLVideoPlayer.mm in Sources */,
 				814B5B8D23F2B86100699CC2 /* SceneDelegate.m in Sources */,
 				8167E94623F38D3400E7254F /* GLView.mm in Sources */,
+				81E9261923FF7D6400D59088 /* AVPacketData.cpp in Sources */,
 				8197BDE923F6DA9600AD507A /* ffmpeg_filter.c in Sources */,
 				8167E94C23F3987400E7254F /* GLLooper.cpp in Sources */,
+				81E9264723FF8FD500D59088 /* DecodeLooper.cpp in Sources */,
 				81284F2B23F53EEF00728DCB /* vecmath.cpp in Sources */,
+				81E9261123FF789900D59088 /* VideoView.mm in Sources */,
 				817DE5CE23F448DF0064F16E /* ImageFilter.mm in Sources */,
+				81E9261C23FF80B300D59088 /* circle_av_packet_queue.cpp in Sources */,
 				8197BDED23F6DA9600AD507A /* ffmpeg_videotoolbox.c in Sources */,
 				8197BDEA23F6DA9600AD507A /* ffmpeg_hw.c in Sources */,
 			);
