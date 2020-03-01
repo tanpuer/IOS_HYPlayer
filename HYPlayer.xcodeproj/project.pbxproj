@@ -41,6 +41,8 @@
 		8197BDFC23F6E36C00AD507A /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8197BDFB23F6E36C00AD507A /* libiconv.tbd */; };
 		8197BDFE23F6E37900AD507A /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8197BDFD23F6E37900AD507A /* libbz2.tbd */; };
 		8197BE0023F6E38200AD507A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8197BDFF23F6E38200AD507A /* libz.tbd */; };
+		81D64DC32407934D0095E691 /* IAudioPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81D64DC12407934D0095E691 /* IAudioPlayer.cpp */; };
+		81D64DC6240793830095E691 /* AudioUnitPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 81D64DC4240793830095E691 /* AudioUnitPlayer.mm */; };
 		81E9261123FF789900D59088 /* VideoView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 81E9261023FF789900D59088 /* VideoView.mm */; };
 		81E9261923FF7D6400D59088 /* AVPacketData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81E9261723FF7D6400D59088 /* AVPacketData.cpp */; };
 		81E9261C23FF80B300D59088 /* circle_av_packet_queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81E9261A23FF80B300D59088 /* circle_av_packet_queue.cpp */; };
@@ -233,6 +235,10 @@
 		8197BDFB23F6E36C00AD507A /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		8197BDFD23F6E37900AD507A /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		8197BDFF23F6E38200AD507A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		81D64DC12407934D0095E691 /* IAudioPlayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IAudioPlayer.cpp; sourceTree = "<group>"; };
+		81D64DC22407934D0095E691 /* IAudioPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IAudioPlayer.h; sourceTree = "<group>"; };
+		81D64DC4240793830095E691 /* AudioUnitPlayer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioUnitPlayer.mm; sourceTree = "<group>"; };
+		81D64DC5240793830095E691 /* AudioUnitPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioUnitPlayer.h; sourceTree = "<group>"; };
 		81E9260F23FF789900D59088 /* VideoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoView.h; sourceTree = "<group>"; };
 		81E9261023FF789900D59088 /* VideoView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoView.mm; sourceTree = "<group>"; };
 		81E9261723FF7D6400D59088 /* AVPacketData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AVPacketData.cpp; sourceTree = "<group>"; };
@@ -611,10 +617,22 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
+		81D64DC0240792DF0095E691 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				81D64DC12407934D0095E691 /* IAudioPlayer.cpp */,
+				81D64DC22407934D0095E691 /* IAudioPlayer.h */,
+				81D64DC4240793830095E691 /* AudioUnitPlayer.mm */,
+				81D64DC5240793830095E691 /* AudioUnitPlayer.h */,
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
 		81E9260C23FF781600D59088 /* video_player */ = {
 			isa = PBXGroup;
 			children = (
 				81E9264A23FFA37000D59088 /* trailer111.mp4 */,
+				81D64DC0240792DF0095E691 /* audio */,
 				81E9262F23FF860700D59088 /* render */,
 				81E9261623FF7AD900D59088 /* decode */,
 				81E9261523FF7ACF00D59088 /* demux */,
@@ -778,6 +796,7 @@
 				81284F2723F5237000728DCB /* CubeFilter.mm in Sources */,
 				814B5B8A23F2B86100699CC2 /* AppDelegate.m in Sources */,
 				81E9263E23FF8A8700D59088 /* gl_utils.mm in Sources */,
+				81D64DC6240793830095E691 /* AudioUnitPlayer.mm in Sources */,
 				81E9262523FF833F00D59088 /* IDecode.cpp in Sources */,
 				81E9261F23FF81A000D59088 /* IDemux.cpp in Sources */,
 				8197BDEC23F6DA9600AD507A /* ffmpeg.c in Sources */,
@@ -800,6 +819,7 @@
 				81E9261123FF789900D59088 /* VideoView.mm in Sources */,
 				817DE5CE23F448DF0064F16E /* ImageFilter.mm in Sources */,
 				81E9261C23FF80B300D59088 /* circle_av_packet_queue.cpp in Sources */,
+				81D64DC32407934D0095E691 /* IAudioPlayer.cpp in Sources */,
 				8197BDED23F6DA9600AD507A /* ffmpeg_videotoolbox.c in Sources */,
 				8197BDEA23F6DA9600AD507A /* ffmpeg_hw.c in Sources */,
 			);
