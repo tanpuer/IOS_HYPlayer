@@ -964,8 +964,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RGBG6J6YY4;
 				HEADER_SEARCH_PATHS = (
-					"/Users/templechen/Desktop/ios/HYPlayer/HYPlayer/FFmpeg-iOS/fftools",
-					"/Users/templechen/Desktop/ios/HYPlayer/HYPlayer/FFmpeg-iOS/include",
+					"$(PROJECT_DIR)/HYPlayer/FFmpeg-iOS/fftools",
+					"$(PROJECT_DIR)/HYPlayer/FFmpeg-iOS/include",
 				);
 				INFOPLIST_FILE = HYPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -991,8 +991,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RGBG6J6YY4;
 				HEADER_SEARCH_PATHS = (
-					"/Users/templechen/Desktop/ios/HYPlayer/HYPlayer/FFmpeg-iOS/fftools",
-					"/Users/templechen/Desktop/ios/HYPlayer/HYPlayer/FFmpeg-iOS/include",
+					"$(PROJECT_DIR)/HYPlayer/FFmpeg-iOS/fftools",
+					"$(PROJECT_DIR)/HYPlayer/FFmpeg-iOS/include",
 				);
 				INFOPLIST_FILE = HYPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
