@@ -980,7 +980,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = narvii.HYPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
-				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s x86 x86_64";
 			};
 			name = Debug;
 		};
@@ -1007,7 +1007,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = narvii.HYPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
-				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s x86 x86_64";
 			};
 			name = Release;
 		};
